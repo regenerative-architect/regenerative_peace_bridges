@@ -1,0 +1,25 @@
+{
+  "name": "Regenerative Peace Bridges",
+  "short_name": "Peace Bridges",
+  "description": "Offline-first evidence library and planner for bringing proven regenerative, healing and peacebuilding work to communities recovering from conflict, safely and with consent.",
+  "lang": "en",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1b18",
+  "theme_color": "#123b36",
+  "categories": ["education", "reference", "productivity"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Evidence library", "short_name": "Evidence", "url": "./index.html#library" },
+    { "name": "Solution bridges", "short_name": "Bridges", "url": "./index.html#bridges" },
+    { "name": "Bridge planner", "short_name": "Planner", "url": "./index.html#planner" }
+  ]
+}

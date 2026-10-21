@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Regenerative Peace Bridges</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#08171e"/>
+      <stop offset="0.55" stop-color="#123b36"/>
+      <stop offset="1" stop-color="#2d5546"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.6" cy="0.72" r="0.55">
+      <stop offset="0" stop-color="#ffd38c" stop-opacity="0.9"/>
+      <stop offset="0.35" stop-color="#f0a33a" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#f0a33a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#sky)"/>
+  <rect width="512" height="512" rx="112" fill="url(#sun)"/>
+  <path d="M92 360C140 196 372 196 420 360" fill="none" stroke="#ffcf7a" stroke-width="20" stroke-linecap="round"/>
+  <path d="M176 360v-98M256 360v-118M336 360v-98" stroke="#ffe2a8" stroke-width="11" stroke-linecap="round"/>
+  <path d="M64 362h384" stroke="#fff1d2" stroke-width="18" stroke-linecap="round"/>
+  <path d="M104 412h304M170 448h172" stroke="#79c3dc" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round"/>
+  <path d="M256 229v-26" stroke="#8fe0bd" stroke-width="8" stroke-linecap="round"/>
+  <path d="M256 206c0-34 22-55 55-57-2 33-23 55-55 57Z" fill="#8fe0bd"/>
+  <path d="M254 214c-3-21-18-34-40-34 1 21 17 34 40 34Z" fill="#6fcfa5"/>
+</svg>
