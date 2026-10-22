@@ -111,6 +111,22 @@ This becomes a decentralized evidence layer.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Peace Systems Mapping extends evidence web into systems mapping:
 
 Node Types:
@@ -264,9 +280,3 @@ Track:
 - what assumptions changed
 
 That would make the platform academically valuable while protecting attribution.
-
-
-
-
-
-
