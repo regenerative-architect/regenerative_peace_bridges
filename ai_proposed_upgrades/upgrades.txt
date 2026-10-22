@@ -1,0 +1,272 @@
+Bridge Evolution System
+
+Right now bridges are static.
+
+I'd make them evolutionary.
+
+Each bridge gains:
+
+### Evidence maturity
+
+- Conceptual
+- Emerging
+- Tested
+- Replicated
+- Context-specific Best Practice
+
+### Community maturity
+
+- Proposed
+- Reviewed
+- Adapted
+- Implemented
+- Locally Owned
+
+Then users can track the lifecycle of a bridge.
+
+Example:
+```yaml
+FMNR Bridge
+Evidence: Tested
+Community: Adapted
+
+
+
+
+
+
+
+
+Impact Metrics Layer
+
+Surprisingly, this is the largest missing component.
+
+The planner asks excellent questions.
+
+But there is not yet a full impact architecture.
+
+add:
+
+### Ecological
+
+- Trees surviving
+- Soil cover
+- Water retention
+- Biodiversity observations
+
+### Community
+
+- Participation rate
+- Women leadership %
+- Youth leadership %
+- Community trust indicators
+
+### Peace
+
+- Disputes resolved
+- Shared projects created
+- Connector institutions strengthened
+
+### Wellbeing
+
+- Food security
+- School attendance
+- Service access
+
+This would turn the platform into a living learning system.
+
+
+
+
+Community Knowledge Capture
+
+The current project imports evidence from institutions.
+
+I would also import evidence from communities.
+
+Add:
+
+### Community observations
+
+Example:
+
+> "Grazing corridor agreement remained stable for 18 months."
+
+### Lessons learned
+
+Example:
+
+> "Committee elections reduced conflict."
+
+### Unexpected outcomes
+
+Example:
+
+> "Tree ownership became contentious after crop prices rose."
+
+This becomes a decentralized evidence layer.
+
+
+
+
+
+
+Peace Systems Mapping extends evidence web into systems mapping:
+
+Node Types:
+
+- Water
+- Food
+- Education
+- Health
+- Land Rights
+- Governance
+- Women Leadership
+- Youth Participation
+- Restoration
+
+Users could see:
+```
+Water
+↓
+School Attendance
+↓
+Social Stability
+↓
+Reduced Tension
+
+```
+
+This would fit beautifully with your systems-thinking approach.
+
+
+
+
+
+
+Bridge Marketplace
+
+Not a financial marketplace.
+
+A solutions commons.
+
+Communities could publish:
+
+### Needed
+
+- Water
+- Food
+- Restoration
+- Mediation
+- Monitoring
+
+### Offered
+
+- Knowledge
+- Volunteers
+- Seeds
+- Training
+- Equipment
+
+Entirely local-first and exportable.
+
+---
+
+# Concepts not yet represented
+
+These are the strongest conceptual additions I'd make.
+
+### Regenerative Governance
+
+A dedicated bridge category addressing:
+
+- participatory budgeting
+- community assemblies
+- stewardship councils
+- transparent decision-making
+
+Governance failures frequently destroy otherwise good projects.
+
+
+
+
+
+
+Digital Peace Infrastructure
+
+A new bridge family:
+
+- offline education hubs
+- community archives
+- local knowledge systems
+- mesh communication
+- resilience information portals
+
+This aligns strongly with the broader Planetary Restoration Archive mission.
+
+
+
+
+
+Restoration Diplomacy
+
+A fascinating future area.
+
+Examples:
+
+- shared watersheds
+- shared seed systems
+- cross-border restoration
+- joint monitoring
+
+where ecological collaboration becomes peacebuilding.
+
+
+
+
+
+Plan Forking
+
+GitHub-style planning.
+
+Users could:
+
+- create bridge plans
+- fork plans
+- adapt plans
+- compare changes
+- preserve attribution
+
+This feels almost inevitable for this project.
+
+---
+
+### IndexedDB Knowledge Vault
+
+Store:
+
+- research notes
+- community observations
+- lessons learned
+- bridge adaptations
+
+all locally.
+
+---
+
+### Contribution Provenance
+
+Track:
+
+- who authored a bridge
+- who adapted it
+- what evidence changed
+- what assumptions changed
+
+That would make the platform academically valuable while protecting attribution.
+
+
+
+
+
+

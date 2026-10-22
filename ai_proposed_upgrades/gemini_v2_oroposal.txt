@@ -1,0 +1,70 @@
+Comparing **v1** and **v2** of the Regenerative Peace Bridges project reveals a clear evolution from a conceptual prototype into a much more robust, field-ready toolkit.
+
+Based on the architecture, text, and structure of both versions, here is a comprehensive breakdown of what **v2 explicitly acknowledges and adds**, as well as the **remaining gaps and features** it still lacks.
+
+---
+
+### Part 1: Newly Acknowledged Concepts and Features in v2
+
+With the release of v2, the creators explicitly addressed several operational and practical realities that were absent or understated in v1:
+
+* **The Community Meeting Kit (`#kit`):**
+* *What it is:* A dedicated workflow addition in v2. Instead of just offering raw evidence lists or a bridge planner, v2 provides structured guidance on how local communities can run listening sessions.
+
+
+* *Why it matters:* It bridges the gap between digital theory and the messy reality of grassroots facilitation, ensuring local voices are gathered safely *before* any solution is proposed.
+
+
+* **Operational Upkeep and Financial Budgeting for Funders:**
+* *What it is:* The funder/organization guidance in v2 explicitly tells stakeholders to *"budget for safeguarding and upkeep"*.
+
+
+* *Why it matters:* v1 focused heavily on the initial design and evidence check; v2 acknowledges that ecological restoration projects fail if long-term community maintenance and physical upkeep are financially ignored.
+
+
+* **Localization and Translation Infrastructure (`lang/` and translation packs):**
+* *What it is:* The codebase and structure now incorporate dedicated language packs (Arabic, French, Spanish) and accessibility-ready region wrappers (`role="region"` for translation status).
+
+
+* *Why it matters:* Acknowledges that affected populations in conflict zones rarely operate in English, making multi-lingual support mandatory for safety and comprehension.
+
+
+* **Automated Testing and Build Tooling (`tools/` and `tests/`):**
+* *What it is:* The inclusion of pre-render scripts, internationalization extraction tools, and automated test runners (`browser-test.mjs`, `check-data.mjs`).
+
+
+* *Why it matters:* Ensures data integrity and reliable offline performance across updates without breaking core functionality.
+
+
+
+---
+
+### Part 2: Features and Concepts Still Missing (Potential v3 Additions)
+
+Despite the mature updates in v2, the project still leaves room for several high-impact technical, safety, and community-empowerment features:
+
+#### 1. Safety & Physical Hazard Integration
+
+* **Explosive Hazards / Demining Pre-requisites:** Restoring land, digging trenches for water management, or planting trees in post-conflict zones carries a severe risk of disturbing unexploded ordnance (UXO) or landmines. The tool currently lists safety steps broadly, but lacks a dedicated step-by-step hazard clearance audit checklist.
+
+
+
+#### 2. Local Data Sharing & Mesh-Network Collaboration
+
+* **Encrypted Peer-to-Peer Export/Import:** While v2 emphasizes running completely offline with local device storage, it lacks a built-in mechanism for local leaders to bundle, encrypt, and securely transfer a community's "bridge plan" between air-gapped field tablets via USB or local mesh Wi-Fi without internet connectivity.
+
+
+
+#### 3. Traditional Knowledge (TK) vs. Formal Science Integration
+
+* **Indigenous and Local Ecological Knowledge Modules:** The Evidence Library heavily features UN agencies, WRI, and academic journals (Grades A–C). While rigorous, this Western scientific framing can sometimes overlook centuries-old indigenous land-management and conflict-resolution practices. A formal framework to log and value traditional knowledge alongside scientific data would strengthen community agency.
+
+
+
+#### 4. Agricultural Inputs & Seed Sovereignty
+
+* **Localized Seed Banking and Nursery Tracking:** Many bridges focus on water, land, and crop restoration, but ignore the foundational supply chain bottleneck: in conflict zones, local seed stocks and livestock lines are often destroyed. Adding a specific module addressing open-source seed sovereignty and community seed banks would fill a critical gap.
+
+#### 5. Interactive Decision Trees in the Planner
+
+* **Conditional Logic for Risk Mitigation:** The current Bridge Planner uses guiding text questions. Transitioning parts of it into an interactive, conditional decision tree (e.g., *“Does this water management plan cross a conflict boundary? If yes, trigger mandatory upstream/downstream mediation safeguards”*) would make it even more foolproof during high-stress community workshops.
