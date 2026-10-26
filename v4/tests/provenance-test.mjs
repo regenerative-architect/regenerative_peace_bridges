@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';import vm from 'node:vm';import {readFileSync} from 'node:fs';
+const box={window:{}};for(const f of ['data.js','provenance.js'])vm.runInNewContext(readFileSync(new URL('../'+f,import.meta.url),'utf8'),box);
+const P=box.window.RPB_PROVENANCE;let n=0;const check=f=>{f();n++;},clone=x=>JSON.parse(JSON.stringify(x));
+const at='2026-10-25T12:00:00.000Z',bid='shared-watersheds';
+const first={...P.initial(),author:'Watershed council',evidence:'Initial field account',sourceIds:['chs-2024'],assumptions:'Both groups can attend.'};
+check(()=>assert.equal(Object.keys(P.clean().bridges).length,0));
+let d=P.record(P.empty(),bid,first,'Council','Initial attribution and assumptions','plan-a','e1',at);
+check(()=>assert.equal(P.get(d,bid).history.length,1));check(()=>assert.equal(P.get(d,'water').history.length,0));
+check(()=>assert.equal(P.lines(d,bid).length,0));check(()=>assert.ok(P.lines(d,bid,false).join(' ').includes('Watershed council')));
+check(()=>assert.throws(()=>P.packet(d,bid)));
+check(()=>assert.throws(()=>P.share(d,bid,'shared','')));
+d=P.share(d,bid,'shared','Council approved this history.');check(()=>assert.equal(P.packet(d,bid).record.history.length,1));
+const second={...first,adapter:'Neighbouring assembly',evidence:'A later observation challenges the first account.',sourceIds:['cda-dnh'],assumptions:'Separate sessions are needed.'};
+const original=JSON.stringify(d),next=P.record(d,bid,second,'Assembly','Access changed','plan-a','e2',at);
+check(()=>assert.equal(JSON.stringify(d),original));check(()=>assert.equal(P.get(next,bid).sharing,'local'));
+const delta=P.changes(P.get(next,bid).history[1].before,P.get(next,bid).history[1].after);
+check(()=>assert.equal(delta.length,4));check(()=>assert.equal(delta.find(x=>x.field==='assumptions').before,first.assumptions));check(()=>assert.equal(delta.find(x=>x.field==='evidence').after,second.evidence));
+const inherited=P.inherit(next,'plan-a');check(()=>assert.equal(P.get(inherited,bid).inheritedFrom,'plan-a'));check(()=>assert.equal(P.get(inherited,bid).history[0].planId,'plan-a'));check(()=>assert.equal(P.get(inherited,bid).sharing,'local'));
+check(()=>assert.deepEqual(clone(P.clean(clone(next))),clone(next)));check(()=>assert.ok(P.texts(next).includes('Initial field account')));
+check(()=>assert.throws(()=>P.record(next,bid,second,'Assembly','No changes','plan-a','e3',at)));
+for(const mutate of [x=>x.schema=2,x=>x.bridges[bid].current.author='Fabricated state',x=>x.bridges[bid].history[1].before.assumptions='Broken chain',x=>x.bridges[bid].history[1].id='e1',x=>x.bridges[bid].history[0].actor='',x=>x.bridges[bid].history[0].reason='',x=>x.bridges[bid].history[0].at='bad',x=>x.bridges[bid].current.sourceIds=['unknown'],x=>x.bridges[bid].current.assumptions='x'.repeat(4001),x=>x.bridges.unknown=x.bridges[bid]]){const bad=clone(next);mutate(bad);check(()=>assert.throws(()=>P.clean(bad)));}
+check(()=>assert.throws(()=>P.snapshot({...first,sourceIds:['chs-2024','chs-2024']})));
+console.log('Passed '+n+' contribution provenance model checks.');
