@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';import vm from 'node:vm';import {readFileSync} from 'node:fs';
+const box={window:{}};for(const f of ['data.js','vault.js'])vm.runInNewContext(readFileSync(new URL('../'+f,import.meta.url),'utf8'),box);
+const V=box.window.RPB_VAULT;let n=0;const check=f=>{f();n++;},clone=x=>JSON.parse(JSON.stringify(x));
+const at='2026-10-25T12:00:00.000Z',values={...V.fresh(),title:'Trial note',body:'Observed soil cover',bridgeId:'shared-watersheds'};
+check(()=>assert.equal(V.clean().records.length,0));
+let d=V.empty();for(const kind of Object.keys(V.kinds))d=V.save(d,kind,0,{...values,kind},at);
+check(()=>assert.equal(d.records.length,4));check(()=>assert.equal(d.records[0].revision,1));
+const before=JSON.stringify(d);const next=V.save(d,'research',1,{...values,body:'Corrected observation'},at);
+check(()=>assert.equal(JSON.stringify(d),before));check(()=>assert.equal(next.records[0].history[0].body,values.body));
+check(()=>assert.equal(next.records[0].revision,2));check(()=>assert.throws(()=>V.save(next,'research',1,values,at)));
+check(()=>assert.throws(()=>V.remove(next,'research',1)));const removed=V.remove(next,'research',2);check(()=>assert.equal(removed.records.length,3));check(()=>assert.throws(()=>V.save(removed,'research',2,values,at)));
+let history=next;for(let i=2;i<15;i++)history=V.save(history,'research',i,values,at);
+check(()=>assert.equal(history.records[0].history.length,10));
+check(()=>assert.deepEqual(clone(V.readPacket(V.packet(history))),clone(history)));
+check(()=>assert.equal(V.merge(history,history).duplicates,4));
+check(()=>assert.equal(V.merge(d,next).conflicts,1));
+check(()=>assert.equal(V.merge(V.empty(),d).added,4));
+check(()=>assert.equal(V.readPacket({app:'regenerative-peace-bridges',kind:'everything',knowledgeVault:d}).records.length,4));
+for(const change of [x=>x.schema=2,x=>x.records.push(x.records[0]),x=>x.records[0].kind='bad',x=>x.records[0].body='',x=>x.records[0].body='x'.repeat(20001),x=>x.records[0].bridgeId='unknown',x=>x.records[0].updated='bad',x=>x.records[0].revision=0,x=>x.records[0].history=[x.records[0]]]){const raw=clone(d);change(raw);check(()=>assert.throws(()=>V.clean(raw)));}
+check(()=>assert.throws(()=>V.readPacket({format:'unknown'})));
+const many={schema:1,records:Array.from({length:501},(_,i)=>({...clone(d.records[0]),id:'record-'+i}))};check(()=>assert.throws(()=>V.clean(many)));
+console.log('Passed '+n+' Knowledge Vault model checks.');
