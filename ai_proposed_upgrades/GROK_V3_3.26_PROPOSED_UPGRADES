@@ -1,0 +1,40 @@
+What v3.26 has now substantially delivered
+Expanded, risk-aware bridges + new families (governance, digital infrastructure, restoration diplomacy, seed sovereignty, etc.)
+Full impact metrics layer with baselines/targets/observations
+Community knowledge capture + private Knowledge Vault + revision/withdrawal
+Indigenous & Traditional Knowledge (holder-led, no institutional grading, separate permissions)
+Plan forking + contribution provenance + lineage
+Peace systems mapping + visual evidence explorer + scenario/portfolio tools
+Non-financial Solutions Commons
+Hard Hazard & Demining Prerequisite (cannot be bypassed)
+Local community/dialect glossary
+Workshop print handouts, posters, and interactive risk-matrix decisions
+Stronger offline transfer bundles and PWA resilience
+Much richer evaluation framing (central proposition, mixed/failed/interrupted results preserved)
+Seed lot tracking and restoration economics
+These directly address most of the original content, measurement, local-knowledge, safety, and systems-thinking requests.What is still missing or underdeveloped1. Reviewed, community-made language packs (highest remaining priority)
+
+Draft French/Spanish/Arabic interface packs exist, plus a plan-local glossary. Safety, consent, and legal text still change only via reviewed packs, and most new modules remain English-only. There is still no production path for community-reviewed full packs (especially for the new layers). Audio of the consent script by native speakers is still absent.2. True low-literacy / oral pathways
+
+Picture cards and print posters help, but there is still no audio-first mode, voice recording of key scripts, or facilitation guidance designed for non-readers as first-class users. The tool remains heavily text-centric for its most powerful features.3. Encrypted, consent-gated device-to-device plan/knowledge sharing
+
+Offline transfer bundles and file exchange exist. Peer-to-peer encrypted sharing between two devices (with explicit mutual consent) is still listed as future or absent. This was repeatedly flagged as valuable and still missing.4. Progressive disclosure / modular packaging
+
+The product is still one large application. The decomposition into 6–8 interlinked projects (Kernel, Library, Meeting Kit, Planner, Knowledge, Impact, Systems, Commons) has not been implemented. Complexity management and progressive disclosure remain internal UI concerns rather than architectural ones. Field users who only need the Meeting Kit + a few bridges still confront the full surface.5. Explicit “when not to attempt a bridge” red-flag guidance
+
+Hazard gates, readiness checks, and consent pauses are strong. There is still no concise, prominent set of hard stop conditions or red-flag contexts (beyond the hazard prerequisite) that tell facilitators “do not start here.”6. Deeper, structured power & elite-capture diagnostics
+
+Warnings exist. A lightweight, repeatable diagnostic (who captures benefits, who controls committees, how to detect and respond) is still thin compared with the sophistication of the systems and impact layers.7. Living, moderated contribution of new bridges by communities
+
+Knowledge capture, commons notices, and provenance are excellent. A governed pathway for communities to propose entirely new bridges that then receive the same evidence + risk framing as the core set is not yet present.8. Real field validation notes and device testing transparency
+
+Extensive automated tests exist. Public notes on testing with actual community facilitators, low-end Android devices, screen-reader users in the target languages, and offline multi-day use are still limited.9. Coarse, privacy-preserving district-level planning layers
+
+Correctly treated with extreme caution and still largely absent (or only illustrative). This remains an open, high-risk area.10. Consolidation and simplification pass
+
+Feature velocity from 3.0 → 3.26 has been extremely high. A deliberate “less is more” release that hides advanced modules by default, improves information architecture, and documents recommended minimal configurations for different user types is still needed.Bottom linev3.26.0 has absorbed the large majority of the substantive upgrades proposed in this thread and has gone further in several directions (traditional knowledge protocols, hard demining gate, seed sovereignty, visual systems stories, local glossaries, workshop printing). The remaining gaps are now concentrated in:
+Accessibility & language justice (reviewed packs + oral modes)
+Architectural modularity / progressive disclosure
+A few high-stakes collaboration and diagnostic features (encrypted peer share, red-flag guidance, elite-capture tools)
+Field-reality hardening and simplification
+The ethical core remains intact. The tool is no longer missing the major conceptual pieces; it is now missing the final layers of accessibility, restraint, and field-proofing that would make the expanded capability safely usable by the people it was designed for.
