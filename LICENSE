@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Ricky Foster
+Copyright (c) 2026 Foster + Navi / Planetary Restoration Archive
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+-----------------------------------------------------------------------------
+Third-party material in this folder
+
+- fonts/: Fraunces and Atkinson Hyperlegible Next, licensed under the SIL Open
+  Font License 1.1. Their licence texts are in fonts/OFL-Fraunces.txt and
+  fonts/OFL-Atkinson-Hyperlegible-Next.txt.
+- Linked publications are not included. They remain the property of their
+  authors and publishers; links and summaries transfer no rights.
+- lang/fr.js, lang/es.js and lang/ar.js are draft interface translations made
+  with AI assistance and not yet reviewed by speakers of those languages. They
+  are released under the MIT licence above.
