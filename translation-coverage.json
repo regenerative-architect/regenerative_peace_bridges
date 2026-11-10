@@ -1,0 +1,82 @@
+[
+  {
+    "lang": "fr",
+    "status": "incomplete-draft",
+    "translatedMessages": 1618,
+    "inventoryKeys": 4532,
+    "missingInventoryKeys": 2926,
+    "unchangedInventoryValues": 22,
+    "translatedContent": 361,
+    "totalContent": 1279
+  },
+  {
+    "lang": "es",
+    "status": "incomplete-draft",
+    "translatedMessages": 1618,
+    "inventoryKeys": 4532,
+    "missingInventoryKeys": 2926,
+    "unchangedInventoryValues": 4,
+    "translatedContent": 361,
+    "totalContent": 1279
+  },
+  {
+    "lang": "ar",
+    "status": "incomplete-draft",
+    "translatedMessages": 3302,
+    "inventoryKeys": 4532,
+    "missingInventoryKeys": 1244,
+    "unchangedInventoryValues": 1,
+    "translatedContent": 859,
+    "totalContent": 1279
+  },
+  {
+    "lang": "uk",
+    "status": "incomplete-draft",
+    "translatedMessages": 3520,
+    "inventoryKeys": 4532,
+    "missingInventoryKeys": 1018,
+    "unchangedInventoryValues": 2,
+    "translatedContent": 964,
+    "totalContent": 1279
+  },
+  {
+    "lang": "ru",
+    "status": "incomplete-draft",
+    "translatedMessages": 3520,
+    "inventoryKeys": 4532,
+    "missingInventoryKeys": 1018,
+    "unchangedInventoryValues": 2,
+    "translatedContent": 964,
+    "totalContent": 1279
+  },
+  {
+    "lang": "he",
+    "status": "incomplete-draft",
+    "translatedMessages": 3103,
+    "inventoryKeys": 4532,
+    "missingInventoryKeys": 1433,
+    "unchangedInventoryValues": 1,
+    "translatedContent": 853,
+    "totalContent": 1279
+  },
+  {
+    "lang": "ko",
+    "status": "incomplete-draft",
+    "translatedMessages": 3037,
+    "inventoryKeys": 4532,
+    "missingInventoryKeys": 1501,
+    "unchangedInventoryValues": 2,
+    "translatedContent": 837,
+    "totalContent": 1279
+  },
+  {
+    "lang": "zh-Hans",
+    "status": "incomplete-draft",
+    "translatedMessages": 3037,
+    "inventoryKeys": 4532,
+    "missingInventoryKeys": 1501,
+    "unchangedInventoryValues": 1,
+    "translatedContent": 837,
+    "totalContent": 1279
+  }
+]

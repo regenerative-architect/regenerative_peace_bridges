@@ -1,0 +1,3 @@
+Regenerative Peace Bridges | v4 translation preview | 10 November 2026
+Extract the ZIP, open regenerative-peace-bridges.html in your browser, and use Language to select a pack. This standalone edition includes the app and language packs for offline use.
+Changes include translated bridge lifecycle filters and definitions, impact badges, workshop questions and printable handouts. English-source comparison uses English reading direction. Missing translations appear in English. All eight translated packs are drafts awaiting fluent community review. The app still carries its base release number during v4 development.
