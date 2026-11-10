@@ -1,0 +1,83 @@
+**Comprehensive list of features, concepts, and gaps** for Regenerative Peace Bridges, based on the documented progression from v1 → v2 (and noting where v3 later began addressing some items).
+
+### Newly acknowledged / substantially strengthened in v2 (relative to v1)
+
+These moved from absent, thin, or purely aspirational in v1 into concrete, operational features or explicit design principles in v2:
+
+- **Full bridge sheets** instead of short cards (origin, who it could help, preconditions, risks, harm prevention, safer first step, measures, connections, evidence links).
+- **Evidence grading system** with explicit A–D + How-to/Context labels, “Keep in mind” limits on every source, and corrected grades after re-checking.
+- **Healing and peace practices** section (12 practices) as a distinct layer alongside the solution bridges.
+- **Structured five-step sequence** (Listen → Safety → Evidence → Start small → Measure & share back) presented as ordered guidance.
+- **Expanded Zero Harm and Anti-Coercion covenant** plus an explicit “What this tool will never do” list.
+- **Explosive ordnance / mine-action safety** as a hard precondition for any land work.
+- **Data ethics and location minimisation** methods made explicit.
+- **Glossary** (28 terms) with plain-language definitions.
+- **Bridge planner** with readiness check (six areas + essential gates), “who is in the room”, dividers & connectors analysis, measures, notes, and live one-page brief.
+- **Safety scan** before any plan, brief, or table leaves the device (detects emails, phones, coordinates, IDs, etc.).
+- **Local-only storage** with inventory, wipe, auto-delete options, persistent-storage request, and versioned saved plans (up to five per plan).
+- **Evidence web** diagram (with list fallback) linking bridges to sources by evidence strength.
+- **Site-wide search**, faceted library filters, and CSV export of the library.
+- **Display & accessibility controls** (theme, plain language, text size, spacing, motion, glass/solid surfaces).
+- **Installable offline PWA** behaviour (service worker, offline fallback page, manifest).
+- **No-JavaScript readable fallback** for core content.
+- **Content Security Policy**, no third-party requests, local fonts, no-referrer policy.
+- **Automated testing foundation** and accessibility audit baseline.
+- **Single shareable file** build option.
+
+These represent a clear maturation: v2 turned the ethical commitments of v1 into usable tools and explicit constraints rather than leaving them as statements of intent.
+
+### Still missing or only lightly addressed (even after v2)
+
+These remain genuine gaps or underdeveloped areas relative to the tool’s stated purpose (safe, consent-based transfer of regenerative and peacebuilding practice into conflict-affected settings).
+
+**Content & evidence depth**
+- Living / community-contributable bridge library (with the same rigorous evidence + risk framing).
+- Longitudinal “what happened next” notes or adaptation histories for the documented cases.
+- Explicit integration pathways for indigenous, customary, and local knowledge systems alongside the formal evidence base (without romanticising either).
+- Deeper, structured gender, age, disability, and displacement analysis inside each bridge (beyond general inclusion language).
+- More bridges in under-represented domains (e.g., soil health & regenerative grazing systems, groundwater recharge, community energy beyond clinics, tenure documentation support, conflict-sensitive value chains).
+- Clearer synthesis pieces on “what the current evidence base still cannot tell us.”
+- Explicit treatment of elite capture diagnostics and power mapping beyond general warnings.
+
+**Practical field tools**
+- Ready-to-print / offline community meeting & listening session kit (guide, consent script, picture cards, shape-coded voting cards, complaints poster). *Added in v3.*
+- Multi-plan support, timeline, budget with integrity checks (fair pay, safeguarding, monitoring, maintenance, contingency), risk register with likelihood/impact grid, and consent log that can pause a plan. *Added in v3.*
+- Printable offline packs of individual bridges or the five-step sequence tailored for low-literacy or low-connectivity settings.
+- Simple, role-based checklists and facilitation scripts that can be used without the digital planner.
+- Audio versions of the consent script and key safety guidance (native speakers). *Noted as future in later versions.*
+
+**Language, accessibility & inclusion**
+- Reviewed (not draft) language packs created with communities, starting with languages actually requested by users.
+- Right-to-left and complex-script support fully production-ready.
+- Stronger support for people who do not read (audio, richer pictograms, oral facilitation guidance).
+- Explicit pathways and safeguards for youth, people with disabilities, and returnees/IDPs inside the bridges and planner.
+
+**Collaboration, feedback & evolution**
+- Privacy-preserving, consent-based mechanisms for communities or practitioners to feed back “we tried X, adapted it this way, measured Y.”
+- Encrypted, consent-gated plan sharing between two devices. *Noted as future.*
+- Versioning and change-log visibility for individual bridges and sources so users know currency.
+- Lightweight, non-extractive citation or partnership pathways for organisations that want to test a bridge under the tool’s covenant (without turning the site into a project marketplace).
+
+**Technical & operational robustness**
+- Fully robust offline behaviour for all interactive elements (planner, search, filters, evidence web) without progressive-enhancement gaps.
+- Coarse, location-minimised district-level planning layers (with strong privacy warnings). *Noted as future, correctly treated with caution.*
+- Broader browser-engine and real-device field testing notes (especially low-end Android, older iOS, assistive technologies used by actual users).
+- Clear public methods note on how evidence grades are assigned and how often links are re-verified.
+
+**Conceptual / framing gaps**
+- Stronger explicit linkage between regenerative practice and the political economy of conflict (resource capture, wartime economies, post-conflict land grabs).
+- More developed treatment of “positive peace” structures versus purely restorative or livelihood interventions.
+- Clearer guidance on when *not* to attempt a bridge (red-flag contexts where the preconditions cannot be met).
+- Explicit discussion of the limits of projectised interventions versus longer-term institutional and governance change.
+- Regenerative economics / circular local value-chain concepts beyond the current livelihood bridges.
+
+### Summary judgement
+
+v2 closed most of the highest-priority usability and safety gaps that existed in v1 and operationalised the original ethical commitments. The remaining gaps cluster around:
+1. Deeper, more participatory content evolution,
+2. Field-ready facilitation materials for mixed-literacy groups,
+3. Real multi-language and oral accessibility,
+4. Careful feedback and longitudinal learning loops that do not create new risks, and
+5. A few additional technical and conceptual refinements.
+
+Many of the most important remaining items (meeting kit, richer planner tabs, draft language packs, more bridges/sources) were subsequently addressed or begun in v3, while the harder ones (reviewed community language packs, audio, encrypted peer sharing, living contribution mechanisms, deeper power and indigenous-knowledge integration) correctly remain open or flagged as future work. The overall trajectory stays coherent with the original restraint and evidence-first philosophy.

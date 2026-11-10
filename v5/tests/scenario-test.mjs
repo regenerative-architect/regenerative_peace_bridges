@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';import vm from 'node:vm';import {readFileSync} from 'node:fs';
+const box={window:{}};vm.runInNewContext(readFileSync(new URL('../scenario_engine.js',import.meta.url),'utf8'),box);const S=box.window.RPB_SCENARIO,copy=x=>JSON.parse(JSON.stringify(x));let n=0;const check=fn=>{fn();n++;};
+check(()=>assert.equal(S.clean().parameters.length,5));check(()=>assert.throws(()=>S.run(S.empty())));
+const p=S.example(),r=S.run(p),o=r.outcomes[0];
+check(()=>assert.equal(o.scenarios[0].value,82.5));check(()=>assert.equal(o.scenarios[0].contributions.reduce((s,c)=>s+c.delta,100),82.5));check(()=>assert.equal(o.sensitivity[0].parameter,'rainfall'));check(()=>assert.equal(o.sensitivity[0].swing,40));check(()=>assert.equal(o.bounds.lower,35));check(()=>assert.equal(o.bounds.upper,165));check(()=>assert.ok(r.label.includes('not a forecast')));
+const base=copy(p);base.scenarios[0].values=Object.fromEntries(base.parameters.map(x=>[x.id,x.baseline]));check(()=>assert.equal(S.run(base).outcomes[0].scenarios[0].value,100));
+const zero=copy(p);Object.keys(zero.outcomes[0].weights).forEach(k=>zero.outcomes[0].weights[k]=0);check(()=>assert.equal(S.run(zero).outcomes[0].bounds.lower,100));check(()=>assert.equal(S.run(zero).outcomes[0].bounds.upper,100));
+const original=JSON.stringify(p);S.run(p);check(()=>assert.equal(JSON.stringify(p),original));check(()=>assert.deepEqual(copy(S.clean(copy(p))),copy(p)));check(()=>assert.ok(S.texts(p).includes(p.context)));
+for(const mutate of [x=>x.schema=2,x=>x.parameters.pop(),x=>x.parameters[0].id='unknown',x=>x.parameters[0].min=500,x=>x.parameters[0].max=0,x=>x.parameters[0].baseline=1001,x=>x.parameters[0].min=-1,x=>x.parameters[3].max=101,x=>x.parameters[0].baseline=Infinity,x=>x.parameters[0].baseline='500',x=>x.parameters[0].unit='',x=>x.outcomes[0].assumption='',x=>x.outcomes[0].weights.funding=NaN,x=>x.outcomes.push(x.outcomes[0]),x=>x.scenarios.push(x.scenarios[0]),x=>x.scenarios[0].values.rainfall=1001,x=>delete x.scenarios[0].values.capacity,x=>x.scenarios[0].title='',x=>x.context='x'.repeat(2001)]){const bad=copy(p);mutate(bad);check(()=>assert.throws(()=>S.clean(bad)));}
+for(const mutate of [x=>x.context='',x=>x.period='',x=>x.parameters[0].assumption='']){const bad=copy(p);mutate(bad);check(()=>assert.throws(()=>S.run(bad)));}
+const neg=copy(p);neg.outcomes[0].baseline=0;check(()=>assert.ok(S.run(neg).outcomes[0].warning));
+// Enumerate all corners: exact extrema for the additive linear model.
+const corners=copy(p);let all=[];for(let mask=0;mask<32;mask++){corners.scenarios=[{id:'corner',title:'Corner',values:Object.fromEntries(p.parameters.map((x,i)=>[x.id,mask&(1<<i)?x.max:x.min]))}];all.push(S.run(corners).outcomes[0].scenarios[0].value);}check(()=>assert.equal(Math.min(...all),o.bounds.lower));check(()=>assert.equal(Math.max(...all),o.bounds.upper));
+console.log('Passed '+n+' scenario model checks.');
